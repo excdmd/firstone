@@ -3,6 +3,8 @@ print(T)
 print(id(T))
 print("%x" % id(T))
 
+#a
+
 # L = [[1,2,3], [5, 3, 2], [7,3,2]]
 # for cube in L:
 #     length = cube[0]
