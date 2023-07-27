@@ -1,7 +1,113 @@
-T = ((1+2),  ((1+2),), ('a'+'b'), (1, ), (1,2,3,4,5))
-print(T)
-print(id(T))
-print("%x" % id(T))
+# 连接到数据库
+connection = MySQLdb.connect(host='localhost', user='root', passwd='password', db='database')
+
+# 创建游标
+cursor = connection.cursor()
+
+# 执行查询
+cursor.execute('SELECT * FROM tablename')
+
+# 获取结果集
+results = cursor.fetchall()
+
+# 关闭游标
+cursor.close()
+
+# 关闭连接
+connection.close()
+
+# d = {'Alice': [50, 61, 66], 'Bob': [80, 61, 66], 'Candy': [88, 75, 90]}
+# sc=d.values()
+# print(len(sc))
+
+# d = {'Alice': [50, 61, 66], 'Bob': [80, 61, 66], 'Candy': [88, 75, 90]}
+# for key, value in d.items():
+#     for score in value:
+#         print(key, score)
+
+# d = {'Alice': [50, 61, 66], 'Bob': [80, 61, 66], 'Candy': [88, 75, 90]}
+# for key,value in d.items():
+#     print(key,value)
+
+# d = {
+#     'Alice': 45,
+#     'Bob': 60,
+#     'Candy': 75,
+#     'David': 86,
+#     'Ellena': 49
+# }
+# print(d) # ==> {'Alice': 45, 'Bob': 60, 'Candy': 75, 'David': 86, 'Ellena': 49}
+# alice_score= d.pop('Alice')
+# print(alice_score) # ==> 45
+# print(d) # ==> {'Bob': 60, 'Candy': 75, 'David': 86, 'Ellena': 49}
+# print(d.keys())
+# if 'Alice' in d.keys():
+#     d.pop('Alice')
+# print(d)    
+
+
+# d = {
+#     'Alice': 45,
+#     'Bob': 60,
+#     'Candy': 75,
+#     'David': 86,
+#     'Ellena': 49
+# }
+# print(d.get('Alice'))
+# d['Alice']=45,60
+# print(d)
+
+
+
+# d = dict()
+# d['Alice'] = []
+# d['Bob'] = []
+# d['Candy'] = []
+# d['Alice'].append(50)
+# d['Alice'].append(61)
+# d['Alice'].append(66)
+# d['Bob'].append(80)
+# d['Bob'].append(61)
+# d['Bob'].append(66)
+# d['Candy'].append(88)
+# d['Candy'].append(75)
+# d['Candy'].append(90)
+
+# d = {
+#     'Alice': 45,
+#     'Bob': 60,
+#     'Candy': 75,
+# }
+# d['Alice']=[50,61,66]
+# d['Bob']=[80,61,66]
+# d['Candy']=[88,75,90]
+# print(d)
+
+
+# d = {
+#     'Alice': 45,
+#     'Bob': 60,
+#     'Candy': 75,
+#     'David': 86,
+#     'Ellena': 49
+# }
+
+# d['Mimi'] = 72
+# d['Dodo'] = 88
+# print(d)
+
+# names = ['Alice', 'Bob', 'Candy', 'David', 'Ellena']
+# scores = [45, 60, 75, 86, 49]
+# index = 0
+# for name in names:
+#     #score = scores[index]
+#     print('name = {}, score = {}'.format(name,scores ))
+#     #index = index + 1
+
+# T = ((1+2),  ((1+2),), ('a'+'b'), (1, ), (1,2,3,4,5))
+# print(T)
+# print(id(T))
+# print("%x" % id(T))
 
 #a
 
